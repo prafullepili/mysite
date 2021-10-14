@@ -53,9 +53,6 @@
    ...:     print(f"https://cryptologos.cc/logos/{i['name'].replace(' ','-').lower()}-{i['symbol'].lower()}-logo.svg")
                          -->
             <div class="portfolio-list">
-                <div class="right-sidebar">
-                
-                </div>
                 <div class="wallets">
                     <div class="logo-name">                        
                         <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.svg" alt="">
@@ -104,6 +101,9 @@
                     <i class="fa fa-plus"></i>
                 </div>
             </div>
+            <div class="right-sidebar">
+                
+            </div>
         {% endblock container %}
     </div>
     <script src="{% static 'WxPortfolio/js/jquery-3.6.0.min.js'%}"></script>
@@ -119,6 +119,7 @@
             });
             $('.addNew').click(function(){
                 $('.right-sidebar').toggleClass('show');
+                $(".profile_container").toggleClass('profile-show');
             })
         })
     </script>

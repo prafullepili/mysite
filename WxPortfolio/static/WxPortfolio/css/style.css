@@ -33,9 +33,7 @@ nav {
     color: #FFF;
     align-items: center;
 }
-.show {
-    right: 0px !important;
-}
+
 nav .brand {
     font-size: 1.7rem;
     font-weight: bold;
@@ -86,11 +84,13 @@ nav .useraction {
 }
 
 /* coins lists */
+
 .container .portfolio-list {
     height: 100vh;
     flex: 4;
     overflow: hidden;
 }
+
 .wallets {
     display: flex;
     padding: 4px 10px;
@@ -99,13 +99,12 @@ nav .useraction {
     line-height: 1.2;
 }
 
-
 .logo-name {
     flex-basis: 33%;
     display: flex;
     align-items: center;
-    
 }
+
 .logo-name p {
     font-size: 140%;
 }
@@ -116,6 +115,7 @@ nav .useraction {
 }
 
 /* On hover show this */
+
 .exist-coin-actions {
     visibility: hidden;
     flex-basis: 15%;
@@ -123,10 +123,12 @@ nav .useraction {
     justify-content: space-between;
     align-items: center;
 }
+
 .exist-coin-actions i {
     font-size: 25px;
 }
-.exist-coin-actions > .add, .remove {
+
+.exist-coin-actions>.add, .remove {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,33 +137,37 @@ nav .useraction {
     border-radius: 10px;
     color: gray;
 }
-.exist-coin-actions > .add:hover {
+
+.exist-coin-actions>.add:hover {
     background-color: rgba(32, 178, 171, 0.61);
     color: white;
     border-radius: 10px;
     transition: .2s all;
     cursor: pointer;
 }
-.exist-coin-actions > .remove:hover {
+
+.exist-coin-actions>.remove:hover {
     background-color: red;
     color: white;
     border-radius: 10px;
     transition: .2s all;
     cursor: pointer;
 }
+
 .coin-values {
     flex-basis: 33%;
     cursor: pointer;
     font-size: 100%;
     margin-right: 10px;
     text-align: right;
-    
     padding: 10px;
 }
+
 .coin-values p {
     font-size: 140%;
     cursor: pointer;
 }
+
 .addNew {
     position: fixed;
     width: 50px;
@@ -177,15 +183,35 @@ nav .useraction {
     cursor: pointer;
     z-index: 222222222222222;
 }
+
 .addNew:hover {
     text-shadow: 2px 2px 4px black;
     box-shadow: 1px 3px 5px black;
 }
 
+.right-sidebar {
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    width: 50%;
+    margin-right: -50%;
+    background-color: rgb(233, 233, 233);
+}
 
+.show {
+    position: relative;
+    margin-right: 0px;
+    transition: 1s all;
+}
+
+.profile-show {    
+    display: none;
+    transition:margin-left 1s all;
+}
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 700px) {    
+
+@media (max-width: 700px) {
     nav .brand {
         font-size: 1.5rem;
     }
@@ -198,7 +224,6 @@ nav .useraction {
     .profile_container {
         width: 100%;
         height: 100%;
-        /* background-color: lightgrey; */
         padding: 10px 0;
     }
     .profile_container img {
@@ -222,13 +247,22 @@ nav .useraction {
         width: 45px;
         margin: 10px;
     }
-    .logo-name p ,.coin-values p {
+    .logo-name p, .coin-values p {
         font-size: 120%;
     }
     .exist-coin-actions {
         flex-basis: 20%;
     }
-    
+    /* sidebar */
+    .right-sidebar { 
+        width: 100%;
+        margin-right: -100%;
+    }
+    .show {
+        position: fixed;
+        margin-right: 0%;
+        transition: 1s all;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -257,7 +291,15 @@ nav .useraction {
         font-weight: normal;
         color: black;
     }
-    
+    .right-sidebar {
+        width: 50%;
+        margin-right: -50%;
+    }
+    .show {
+        position: relative;
+        margin-right: 0%;
+        transition: 1s all;
+    }
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -275,5 +317,13 @@ nav .useraction {
         padding: 10px 15%;
         align-items: center;
     }
-    
+    .right-sidebar {
+        width: 30%;
+        margin-right: -30%;
+    }
+    .show {
+        position: relative;
+        margin-right: 0%;
+        transition: 1s all;
+    }
 }
