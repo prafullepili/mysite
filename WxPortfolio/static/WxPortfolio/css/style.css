@@ -282,7 +282,7 @@ nav .useraction {
     /* side bar right */
     .right-sidebar {
         position:absolute;
-        right: -350px;
+        right: -400px;
         transition: 1s all;
     }
 }
@@ -301,5 +301,11 @@ nav .useraction {
         justify-content: space-between;
         padding: 10px 15%;
         align-items: center;
+    }
+    /* side bar right */
+    .right-sidebar {
+        position:absolute;
+        right: -400px;
+        transition: 1s all;
     }
 }
