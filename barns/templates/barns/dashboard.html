@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+<div class="dashboard_main">
+    <!-- side bar -->
+    {% include 'sidebar.html' %}
+    <div class="dashboard_content_main">
+        <!-- user and notification logo -->
+        <div class="top_bar">
+            <div class="notification_user_icon">
+                <div>
+                    <span>
+                        <i class="far fa-bell"></i>
+                    </span>
+                    <small>2</small>
+                </div>
+                <div>
+                    <span>
+                        <i class="far fa-user"></i>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- top heading and view all -->
+        <div class="top_heading_with_name">
+            <h2><span>Hello,</span> Jonathan David</h2>
+            <small><span> Welcome to your dashboard,</span> here is an overview of your favorite <span
+                    style="color: orangered; opacity: 1;margin-right:10% ;">barns.</span></small>
+            <small><a href="#" style="color: orangered; opacity: 1;text-decoration: none;">View All
+                    Barns</a></small>
+        </div>
+
+        <!-- right side cards sections -->
+        <div class="dash_cards_main">
+            <div class="dash_card_left_side">
+                <div class="left_cards cardno-1">
+                    <a href="{% url 'barns:barns_details' %}">
+                        <p>Barn 01</p>
+                        <h1>3.8</h1> <small class="kg">kg</small>
+                        <br>
+                        <small class="Avg">Average weight</small>
+                        <div class="card_footer">
+                            <div class="footer_card_content">
+                                <i class="far fa-calendar-alt"></i>
+                                <small>10 Days old</small>
+                            </div>
+                            <div class="footer_card_content">
+                                <i class="fab fa-the-red-yeti"></i>
+                                <small>200 Australian Chickens</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="left_cards cardno-2">
+                    <a href="{% url 'barns:barns_details' %}">
+                        <p>Barn 02</p>
+                        <h1>2.7</h1> <small class="kg">kg</small>
+                        <br>
+                        <small class="Avg">Average weight</small>
+                        <div class="card_footer">
+                            <div class="footer_card_content">
+                                <i class="far fa-calendar-alt"></i>
+                                <small>10 Days old</small>
+                            </div>
+                            <div class="footer_card_content">
+                                <i class="fab fa-the-red-yeti"></i>
+                                <small>200 Australian Chickens</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="left_cards cardno-3">
+                    <a href="{% url 'barns:barns_details' %}">
+                        <p>Barn 03</p>
+                        <h1>1.9</h1> <small class="kg">kg</small>
+                        <br>
+                        <small class="Avg">Average weight</small>
+                        <div class="card_footer">
+                            <div class="footer_card_content">
+                                <i class="far fa-calendar-alt"></i>
+                                <small>10 Days old</small>
+                            </div>
+                            <div class="footer_card_content">
+                                <i class="fab fa-the-red-yeti"></i>
+                                <small>200 Australian Chickens</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="left_cards cardno-4">
+                    <a href="{% url 'barns:barns_details' %}">
+                        <p>Barn 04</p>
+                        <h1>3.8</h1> <small class="kg">kg</small>
+                        <br>
+                        <small class="Avg">Average weight</small>
+                        <div class="card_footer">
+                            <div class="footer_card_content">
+                                <i class="far fa-calendar-alt"></i>
+                                <small>10 Days old</small>
+                            </div>
+                            <div class="footer_card_content">
+                                <i class="fab fa-the-red-yeti"></i>
+                                <small>200 Australian Chickens</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="left_cards cardno-5">
+                    <a href="{% url 'barns:barns_details' %}">
+                        <p>Barn 05</p>
+                        <h1>1.9</h1> <small class="kg">kg</small>
+                        <br>
+                        <small class="Avg">Average weight</small>
+                        <div class="card_footer">
+                            <div class="footer_card_content">
+                                <i class="far fa-calendar-alt"></i>
+                                <small>10 Days old</small>
+                            </div>
+                            <div class="footer_card_content">
+                                <i class="fab fa-the-red-yeti"></i>
+                                <small>200 Australian Chickens</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="left_cards cardno-6">
+                    <a href="{% url 'barns:barns_details' %}">
+                        <p>Barn 06</p>
+                        <h1>2.7</h1> <small class="kg">kg</small>
+                        <br>
+                        <small class="Avg">Average weight</small>
+                        <div class="card_footer">
+                            <div class="footer_card_content">
+                                <i class="far fa-calendar-alt"></i>
+                                <small>10 Days old</small>
+                            </div>
+                            <div class="footer_card_content">
+                                <i class="fab fa-the-red-yeti"></i>
+                                <small>200 Australian Chickens</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="dash_card_right_side">
+                <div class="right_cards">
+                    <div>
+                        <img src="{% static 'chicken.png' %}" alt="">
+                        <h2>30,000</h2>
+                        <small>Total Chickens</small>
+                    </div>
+                </div>
+                <div class="right_cards">
+                    <div>
+                        <i class="fas fa-weight icons"></i>
+                        <h2>16</h2>
+                        <small>Active Scales</small>
+                    </div>
+                </div>
+                <div class="right_cards">
+                    <div>
+                        <i class="fas fa-warehouse icons"></i>
+                        <h2>5</h2>
+                        <small>Registerd Banrs</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

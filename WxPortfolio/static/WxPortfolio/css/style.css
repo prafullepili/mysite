@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Heebo', sans-serif;
+    /* overflow: hidden; */
+}
+
+nav {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #FFF;
+    align-items: center;
+}
+
+nav .brand {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+nav .useraction {
+    display: flex;
+    gap: 15px;
+    font-size: 1.25rem;
+}
+
+.container {
+    display: flex;
+}
+
+.profile_container {
+    margin: 0 auto;
+    height: 100vh;
+    flex-basis: 25%;
+    text-align: center;
+}
+
+.profile_container img {
+    width: 50%;
+    border: 1px solid gray;
+    border-radius: 100%;
+    margin: 20px 0 10px 0;
+}
+
+.profile_container p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: Helvetica, sans-serif;
+    color: gray
+}
+
+.port-summary {
+    margin: 0 auto;
+}
+
+.port-summary div {
+    margin: 10px 0;
+}
+
+.port-summary p {
+    font-size: 90%;
+    font-weight: bold;
+}
+
+/* coins lists */
+.container .portfolio-list {
+    height: 100vh;
+    flex: 4;
+}
+.wallets {
+    display: flex;    
+    padding: 4px 10px;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2;
+}
+
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+.logo-name p {
+    font-size: 140%;
+}
+
+.logo-name img {
+    width: 50px;
+    margin: 10px;
+}
+
+/* On hover show this */
+.exist-coin-actions {
+    /* visibility: hidden; */
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.exist-coin-actions i {
+    font-size: 25px;
+}
+.exist-coin-actions > .add, .remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+.exist-coin-actions > .add:hover {
+    background-color: rgba(32, 178, 171, 0.61);
+    color: white;
+    border-radius: 10px;
+}
+.coin-values {
+    cursor: pointer;
+    font-size: 100%;
+    margin-right: 10px;
+    text-align: right;
+}
+.coin-values p {
+    font-size: 140%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 700px) {
+    nav .brand {
+        font-size: 1.5rem;
+    }
+    nav .useraction {
+        font-size: 1.05rem;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .profile_container {
+        width: 100%;
+        height: 100%;
+        /* background-color: lightgrey; */
+        padding: 10px 0;
+    }
+    .profile_container img {
+        width: 16%;
+    }
+    .profile_container p {
+        font-size: 1.2rem;
+    }
+    .port-summary {
+        width: 100%;
+        display: grid;
+        grid-template: repeat(1, 1fr)/repeat(3, 1fr);
+        margin-top: 20px;
+    }
+    .port-summary p {
+        font-size: 70%;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 701px) {
+    .profile_container {
+        padding-top: 30px;
+    }
+    .profile_container img {
+        width: 40%;
+    }
+    .profile_container {
+        flex-basis: 35%;
+    }
+    .port-summary>div {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15%;
+        align-items: center;
+    }
+    .port-summary>div>h2 {
+        font-size: 100%;
+    }
+    .port-summary p {
+        font-size: 90%;
+        font-weight: normal;
+        color: black;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+
+@media (min-width: 1000px) {
+    .profile_container img {
+        width: 35%;
+    }
+    .profile_container {
+        flex-basis: 28%;
+    }
+    .port-summary>div {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15%;
+        align-items: center;
+    }
+}

@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            background-color: rgba(128, 128, 128, .1);
+        }
+
+        .login_main_container {
+            width: 70%;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        .sub_main_container {
+            display: flex;
+            background-color: white;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+        .login_form_div {
+            width: 60%;
+            display: flex;
+        }
+        .login_form_sub_div {            
+            margin: auto auto;
+            padding: 10px;
+            width: 70%;
+        }
+        .login_form_sub_div p{
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            opacity: .56;
+            margin-bottom: 39px;
+        }
+        .login_form_sub_div img {
+            width: 300px;
+        }
+        fieldset input {
+            margin: 0;
+            font-size: 16px;
+            outline: none;
+            border: 0;
+            width: 100%;
+            height: 100%;
+        }
+        fieldset {
+            border-radius: 5px;
+            border: 1px solid ;
+            height: 60px;
+            margin: 15px 0;
+        }
+        .remember_forget {
+            display:  flex;
+            justify-content: space-between;
+        }
+        .remember_forget small {
+            font-size: 16px;
+        }
+        .login_btn {
+            margin-top: 50px;
+            font-size: 16px;
+            background-color:#609c1c;
+            padding: 10px 30px;
+            border-radius: 5px;
+        }
+        .banner img{
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login_main_container">
+        <div class="sub_main_container">
+            <div class="login_form_div">
+                <div class="login_form_sub_div">
+                    <img src="{% static 'logo.PNG'%}" alt="">
+                    <p>Please log in to your account</p>
+                    <form action="{% url 'barns:dashboard' %}">
+                        <fieldset>
+                            <legend><label for="email">User Name</label></legend>
+                            <input type="email" id="email" value="equerre@equerre.com" placeholder="User name">
+                        </fieldset>
+                        <fieldset>
+                            <legend><label for="password">Password</label></legend>
+                            <input type="password" id="password" value="kkkkkkkkkkkk">
+                        </fieldset>
+                        <div class="remember_forget">
+                            <label for="Remember"> <input type="checkbox" name="" id="Remember"> Remember me</label>
+                            <small> forget password</small>
+                        </div>
+                        <input type="submit" value="Login" class="login_btn">
+                    </form>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="{% static 'loginpageimage.PNG'%}" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

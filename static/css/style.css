@@ -1,0 +1,527 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --bg_color: rgba(29, 27, 27, 0.01);
+}
+
+.dashboard_main {
+    display: flex;
+}
+
+/* sidebar logo */
+
+.sidebar_logo {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.sidebar_logo img {
+    width: 90%;
+}
+
+/* sidebar modules */
+
+.sidebar_main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.sub_modules {
+    display: flex;
+}
+
+.sub_modules p {
+    font-size: 15px;
+    padding: 10px 0;
+    color: gray;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.sub_modules p span {
+    margin: 0 23px;
+    font-size: 18px;
+}
+
+.sub_modules a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* side bar hove effect */
+
+.sub_modules p:hover {
+    border-right: 4px solid orangered;
+    color: orangered;
+    background-color: rgba(249, 120, 22, 0.054);
+}
+
+.sub_modules_active {
+    border-right: 4px solid orangered;
+    color: orangered !important;
+    background-color: rgba(249, 120, 22, 0.054);
+}
+
+/* Bottom sidebar container */
+
+.profile_container {
+    display: flex;
+    padding: 5px 16px;
+    margin-top: auto;
+}
+
+.profile_container .profile_pic {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
+
+.profile_container {
+    font-size: 14px;
+}
+
+.profile_container .profile_pic img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* dashboard content start */
+
+.dashboard_content_main {
+    background-color: rgba(29, 27, 27, 0.01);
+    width: 100%;
+    /* padding: 25px 0px; */
+}
+
+.top_bar {
+    display: flex;
+}
+
+/* top icons section */
+
+.top_bar .notification_user_icon {
+    margin-left: auto;
+    display: flex;
+}
+
+.top_bar .notification_user_icon div:nth-child(1) {
+    position: relative;
+}
+
+.top_bar .notification_user_icon div:nth-child(1) small {
+    position: absolute;
+    top: 15px;
+    font-size: 10px;
+    background-color: orangered;
+    padding: 2px 5px;
+    border-radius: 10px;
+    left: 10px;
+}
+
+.top_bar .notification_user_icon div {
+    font-size: 22px;
+    padding: 25px 40px 0 0;
+}
+
+/* heading or name */
+
+.dashboard_content_main .top_heading_with_name {
+    margin-top: 10px;
+    padding-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.dashboard_content_main .top_heading_with_name h2 span {
+    font-weight: 300;
+}
+
+.top_heading_with_name small {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.top_heading_with_name small span {
+    opacity: .5;
+}
+
+/* cards main sections */
+
+.dash_cards_main {
+    display: flex;
+    margin-left: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+/* card left start start */
+
+.dash_card_left_side {
+    display: flex;
+    width: 75%;
+    min-width: 680px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.left_cards {
+    width: 240px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 2.5%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.left_cards h1 {
+    display: inline-block;
+    font-size: 70px;
+}
+
+.left_cards .kg {
+    display: inline-block;
+    font-size: 20px;
+    opacity: .8;
+}
+
+.left_cards .Avg {
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.left_cards .card_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 40%;
+    margin-top: 20px;
+}
+
+.left_cards .card_footer .footer_card_content {
+    border: 1px solid rgba(255, 255, 255, 0.525);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.cardno-1 {
+    background-color: turquoise;
+}
+
+.cardno-2 {
+    background-color: yellowgreen;
+}
+
+.cardno-3 {
+    background-color: palevioletred;
+}
+
+.cardno-4 {
+    background-color: blueviolet;
+}
+
+.cardno-5 {
+    background-color: blue;
+}
+
+.cardno-6 {
+    background-color: darkgreen;
+}
+
+/* card right side */
+
+.dash_card_right_side {
+    display: grid;
+    grid-template: repeat(3, 140px)/repeat(1, 250px);
+    gap: 80px;
+    justify-content: center;
+}
+
+.dash_card_right_side .right_cards {
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px;
+    background-color: white;
+    padding-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dash_card_right_side .right_cards img {
+    width: 15%;
+}
+
+.dash_card_right_side .right_cards {
+    text-align: center;
+}
+
+.dash_card_right_side .right_cards .icons {
+    font-size: 35px;
+    padding: 5px;
+    color: gray;
+}
+
+.dash_card_right_side .right_cards h2 {
+    padding-top: 3px;
+}
+
+.dash_card_right_side .right_cards small {
+    font-weight: bold;
+}
+
+
+
+/* Barns page css */
+/* width */
+.table_container::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+.table_container::-webkit-scrollbar-track {
+    background: white;
+}
+/* Handle */
+.table_container::-webkit-scrollbar-thumb {
+    background: #aaa;
+}
+/* Handle on hover */
+.table_container::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+
+.devices_content_main {
+    background-color: var(--bg_color);
+    width: 100%;
+}
+.devices_content_main .top_bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.devices_content_main .top_heading_with_name {
+    margin-top: 20px;
+    padding-left: 40px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.devices_content_main .top_heading_with_name h2 span {
+    font-weight: 300;
+}
+
+.devices_overview_main {
+    position: relative;
+    display: flex;
+    margin: 0 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.devices_overview_main .heading_above_table {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.devices_overview_main .heading_above_table h2 {
+    font-weight: 600;
+    color: #454545;
+}
+
+.devices_overview_main .heading_above_table .search_input_container {
+    text-align: right;
+    position: relative;
+}
+
+.devices_overview_main .heading_above_table .search_input_container .search_icon {
+    position: absolute;
+    left: 8%;
+    bottom: 25%;
+    font-size: 16px;
+    color: gray;
+}
+
+.devices_overview_main .heading_above_table input {
+    border: 1px solid rgba(128, 128, 128, 0.033);
+    padding: 13px 10px 13px 45px;
+    border-radius: 5px;
+    /* border: 0; */
+    outline: none;
+    background-color: var(--bg_color);
+}
+
+.devices_overview_main .table_container {
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    overflow: auto;
+}
+.table {
+    color: grey;
+}
+.devices_overview_main .main_table .table_first_icon {
+    margin-right: 10px;
+    font-size: 16px;
+}
+.devices_overview_main .status_connected {
+    width: 10px !important;
+    height: 10px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    display: inline-block;
+}
+.devices_overview_main .status_disconnected {
+    width: 10px !important;
+    height: 10px;
+    border-radius: 10px;
+    background-color: red;
+    display: inline-block;
+}
+.devices_overview_main .main_table {
+    border-collapse: collapse;
+}
+
+/* add button */
+.add_barnsORdevice {    
+    padding: 0px 12px;
+    font-size: 48px;
+    border-radius: 15px;
+    color: white;
+    font-weight: 100;
+    background-color: rgba(255, 68, 0, 0.885);
+    position: fixed;
+    bottom: 5px;
+    right: 50px;
+    z-index: 11;
+    box-shadow: 1px 0px 5px orange;
+}
+
+
+
+
+/* Barns page vies */
+.barns_content_main {
+    background-color: var(--bg_color);
+    width: 100%;
+}
+.barns_content_main .top_bar {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.4;
+}
+
+.barns_content_main .top_heading_with_name {
+    margin-top: 20px;
+    padding-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.barns_content_main .top_heading_with_name h2 span {
+    font-weight: 300;
+}
+
+.barns_overview_main {
+    position: relative;
+    display: flex;
+    margin: 0 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.barns_overview_main .heading_above_table {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.barns_overview_main .heading_above_table h2 {
+    font-weight: 600;
+    color: #454545;
+}
+
+.barns_overview_main .heading_above_table .search_input_container {
+    text-align: right;
+    position: relative;
+}
+
+.barns_overview_main .heading_above_table .search_input_container .search_icon {
+    position: absolute;
+    left: 8%;
+    bottom: 25%;
+    font-size: 16px;
+    color: gray;
+}
+.barns_overview_main .heading_above_table input {
+    border: 1px solid rgba(128, 128, 128, 0.033);
+    padding: 13px 10px 13px 45px;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--bg_color);
+}
+.barns_overview_main .table_container {
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    overflow: auto;
+}
+.barns_overview_main .main_table .table_first_icon {
+    margin-right: 10px;
+    font-size: 13px;
+}
+.barns_overview_main .high {
+    color: greenyellow;
+}
+.barns_overview_main .low {
+    color: red;
+}
+.barns_overview_main .above_baseline {
+    width: 10px !important;
+    height: 10px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    display: inline-block;
+}
+.barns_overview_main .under_baseline {
+    width: 10px !important;
+    height: 10px;
+    border-radius: 10px;
+    background-color: red;
+    display: inline-block;
+}
+.barns_overview_main .near_baseline {
+    width: 10px !important;
+    height: 10px;
+    border-radius: 10px;
+    background-color: orange;
+    display: inline-block;
+}
+.barns_overview_main .main_table {
+    border-collapse: collapse;
+}
+.barns_overview_main .favourite {
+    font-size: 17px;
+    color: grey;
+}

@@ -1,0 +1,35 @@
+{% load static %}
+<!-- side bar -->
+<div class="sidebar_main">
+    <div class="sidebar_logo">
+        <a href="{% url 'barns:dashboard'%}"><img src="{% static 'logo.PNG' %}" alt=""></a>
+    </div>
+    <div class="modules_main">
+        <div class="sub_modules">
+            <p class="{{dashboard}}"><span><i class="fas fa-th-large"></i> </span><a href="{% url 'barns:dashboard'%}"> Dashboard</a></p>
+        </div>
+        <div class="sub_modules">
+            <p class="{{barns}}"> <span> <i class="fas fa-warehouse" style="font-size:15px;"></i></span><a
+                    href="{% url 'barns:barn' %}">Barn</a></p>
+        </div>
+        <div class="sub_modules">
+            <p class="{{devices}}"> <span><i class="far fa-minus-square "></i></span> <a href="{% url 'barns:devices' %}">Devices</a> </p>
+        </div>
+        <div class="sub_modules">
+            <p> <span><i class="fas fa-exclamation-circle"></i></span> Alert</p>
+        </div>
+        <div class="sub_modules ">
+            <p> <span><i class="fas fa-cog"></i></span> Settings</p>
+        </div>
+    </div>
+    <div class="profile_container">
+        <div class="profile_pic">
+            <img src="{% static 'profile.png'%}" alt="">
+        </div>
+        <div class="name_roll">
+            <p><b>Jonathan David</b></p>
+            <small>Farm Admin</small>
+        </div>
+    </div>
+</div>
+<!-- side bar end-->

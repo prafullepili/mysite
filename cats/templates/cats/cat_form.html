@@ -1,0 +1,25 @@
+{% extends "base_bootstrap.html" %}
+{% block content %}
+<style>
+  td {
+    padding: 5px 3px;
+  }
+</style>
+<br>
+  <form action="" method="post" class="">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <br>
+    <input type="submit" value="Submit" class="">
+    <input type="submit" onclick="Cancel()" value="Cancel">
+  </form>
+
+  <script>
+    function Cancel(){
+      window.location='{% url "cats:all" %}'; 
+      return false;
+    }
+  </script>
+{% endblock %}
