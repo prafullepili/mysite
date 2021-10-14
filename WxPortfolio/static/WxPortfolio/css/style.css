@@ -191,6 +191,10 @@ nav .useraction {
         font-weight: bold;
         color: black;
     }
+    .logo-name img {
+        width: 45px;
+        margin: 10px;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
