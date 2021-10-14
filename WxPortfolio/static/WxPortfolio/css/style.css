@@ -49,6 +49,7 @@ nav .useraction {
 
 .container {
     display: flex;
+    overflow: hidden;
 }
 
 .profile_container {
