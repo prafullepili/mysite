@@ -244,19 +244,11 @@ nav .useraction {
     .exist-coin-actions {
         flex-basis: 20%;
     }
-    .right-sidebar {
-        background-color: white;
-        display: block;
-        position: static;
-        width: 350px;
-        height: 100%;
-        border: 1px solid #000;
-        right: -350px;
-    }
     /* side bar right */
     .right-sidebar {
+        width: 100%;
         position:absolute;
-        right: -350px;
+        right: -100%;
         transition: 1s all;
     }
 }
