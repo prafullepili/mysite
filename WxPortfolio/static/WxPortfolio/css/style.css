@@ -186,10 +186,10 @@ nav .useraction {
     background-color: white;
     display: block;
     position: static;
-    width: 350px;
+    width: 400px;
     height: 100%;
     border: 1px solid #000;
-    right: -350px;
+    right: -400px;
 }
 
 
