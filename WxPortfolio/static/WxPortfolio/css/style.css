@@ -22,7 +22,7 @@ a {
 body {
     font-size: 16px;
     font-family: 'Heebo', sans-serif;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 nav {
@@ -33,7 +33,9 @@ nav {
     color: #FFF;
     align-items: center;
 }
-
+.show {
+    right: 0px !important;
+}
 nav .brand {
     font-size: 1.7rem;
     font-weight: bold;
@@ -242,7 +244,15 @@ nav .useraction {
     .exist-coin-actions {
         flex-basis: 20%;
     }
-
+    .right-sidebar {
+        background-color: white;
+        display: block;
+        position: static;
+        width: 350px;
+        height: 100%;
+        border: 1px solid #000;
+        right: -350px;
+    }
     /* side bar right */
     .right-sidebar {
         position:absolute;
