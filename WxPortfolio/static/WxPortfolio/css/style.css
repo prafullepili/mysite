@@ -49,7 +49,6 @@ nav .useraction {
 
 .container {
     display: flex;
-    overflow: hidden;
 }
 
 .profile_container {
@@ -90,6 +89,7 @@ nav .useraction {
 .container .portfolio-list {
     height: 100vh;
     flex: 4;
+    overflow: hidden;
 }
 .wallets {
     display: flex;
@@ -182,27 +182,10 @@ nav .useraction {
     box-shadow: 1px 3px 5px black;
 }
 
-/* Right side bar */
-.right-sidebar {
-    background-color: white;
-    display: block;
-    position: static;
-    width: 400px;
-    height: 100%;
-    border: 1px solid #000;
-    right: -400px;
-}
-
-
-
-
-
-
-
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 700px) {
+@media (max-width: 700px) {    
     nav .brand {
         font-size: 1.5rem;
     }
@@ -245,13 +228,7 @@ nav .useraction {
     .exist-coin-actions {
         flex-basis: 20%;
     }
-    /* side bar right */
-    .right-sidebar {
-        width: 100%;
-        position:absolute;
-        right: -100%;
-        transition: 1s all;
-    }
+    
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -280,12 +257,7 @@ nav .useraction {
         font-weight: normal;
         color: black;
     }
-    /* side bar right */
-    .right-sidebar {
-        position:absolute;
-        right: -400px;
-        transition: 1s all;
-    }
+    
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -303,10 +275,5 @@ nav .useraction {
         padding: 10px 15%;
         align-items: center;
     }
-    /* side bar right */
-    .right-sidebar {
-        position:absolute;
-        right: -400px;
-        transition: 1s all;
-    }
+    
 }
