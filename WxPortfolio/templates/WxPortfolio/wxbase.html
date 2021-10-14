@@ -19,7 +19,7 @@
                 <a href="#" class="user">{{request.user | upper}}</a>
                 <a href="#" class="logout">Logout</a>
             {% else %}
-                <a href="{%url  'login'%}" class="login">Login</a>
+                <a href="{%url 'login'%}" class="login">Login</a>
                 <a href="#" class="register">Register</a>
             {% endif %}
        </div>
@@ -84,11 +84,25 @@
                             <small>BitTorrent</small>
                         </div>
                     </div>
+                    <div class="exist-coin-actions">
+                        <div class="add">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="remove">
+                            <i class="fa fa-remove"></i>
+                        </div>
+                    </div>
                     <div class="coin-values">
                         <P title="Total {{BTT}} coins">3554</P>
                         <small title="current value">₹1,053.05</small>
                     </div>
                 </div>
+            </div>
+            <div class="addNew">
+                <i class="fa fa-plus"></i>
+            </div>
+            <div class="right-sidebar">
+                
             </div>
         {% endblock container %}
     </div>
@@ -96,11 +110,16 @@
     <script>
         $(document).ready(function(){
             $('.wallets').mouseover(function(){
-                $(this.childNodes[3]).css("visibility","visible");
+                $(this.childNodes[3]).css({"visibility":"visible"});
+                $(this.childNodes[3]).parent().css({'background-color':"rgba(211, 211, 211, 0.527)","transition":".2s all"});
             });
             $('.wallets').mouseleave(function(){
                 $('.exist-coin-actions').css("visibility","hidden");
+                $(this.childNodes[3]).parent().css('backgroundColor',"white");
             });
+            $('.addNew').click(function(){
+                $('.right-sidebar').css({"right": "0px"})
+            })
         })
     </script>
 </body>

@@ -89,7 +89,7 @@ nav .useraction {
     flex: 4;
 }
 .wallets {
-    display: flex;    
+    display: flex;
     padding: 4px 10px;
     justify-content: space-between;
     align-items: center;
@@ -98,8 +98,10 @@ nav .useraction {
 
 
 .logo-name {
+    flex-basis: 33%;
     display: flex;
     align-items: center;
+    
 }
 .logo-name p {
     font-size: 140%;
@@ -113,9 +115,9 @@ nav .useraction {
 /* On hover show this */
 .exist-coin-actions {
     visibility: hidden;
-    width: 150px;
+    flex-basis: 15%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 .exist-coin-actions i {
@@ -128,26 +130,65 @@ nav .useraction {
     width: 40px;
     height: 40px;
     border-radius: 10px;
+    color: gray;
 }
 .exist-coin-actions > .add:hover {
     background-color: rgba(32, 178, 171, 0.61);
     color: white;
     border-radius: 10px;
+    transition: .2s all;
+    cursor: pointer;
+}
+.exist-coin-actions > .remove:hover {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    transition: .2s all;
+    cursor: pointer;
 }
 .coin-values {
+    flex-basis: 33%;
     cursor: pointer;
     font-size: 100%;
     margin-right: 10px;
     text-align: right;
+    
+    padding: 10px;
 }
 .coin-values p {
     font-size: 140%;
     cursor: pointer;
 }
+.addNew {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+    padding: 4px 0;
+    cursor: pointer;
+    z-index: 222222222222222;
+}
+.addNew:hover {
+    text-shadow: 2px 2px 4px black;
+    box-shadow: 1px 3px 5px black;
+}
 
-
-
-
+/* Right side bar */
+.right-sidebar {
+    background-color: white;
+    display: block;
+    position: static;
+    width: 350px;
+    height: 100%;
+    border: 1px solid #000;
+    right: -350px;
+}
 
 
 
@@ -195,6 +236,19 @@ nav .useraction {
         width: 45px;
         margin: 10px;
     }
+    .logo-name p ,.coin-values p {
+        font-size: 120%;
+    }
+    .exist-coin-actions {
+        flex-basis: 20%;
+    }
+
+    /* side bar right */
+    .right-sidebar {
+        position:absolute;
+        right: -350px;
+        transition: 1s all;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -222,6 +276,12 @@ nav .useraction {
         font-size: 90%;
         font-weight: normal;
         color: black;
+    }
+    /* side bar right */
+    .right-sidebar {
+        position:absolute;
+        right: -350px;
+        transition: 1s all;
     }
 }
 
