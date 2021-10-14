@@ -112,7 +112,7 @@ nav .useraction {
 
 /* On hover show this */
 .exist-coin-actions {
-    /* visibility: hidden; */
+    visibility: hidden;
     width: 150px;
     display: flex;
     justify-content: space-evenly;
