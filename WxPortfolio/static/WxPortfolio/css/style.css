@@ -95,7 +95,7 @@ nav .useraction {
 .container .portfolio-list {
     height: 100vh;
     flex: 4;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .wallets {
