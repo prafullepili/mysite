@@ -201,12 +201,7 @@ nav .useraction {
 .show {
     position: relative;
     margin-right: 0px;
-    transition: 1s all;
-}
-
-.profile-show {    
-    display: none;
-    transition:margin-left 1s all;
+    transition: .7s all;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -261,7 +256,7 @@ nav .useraction {
     .show {
         position: fixed;
         margin-right: 0%;
-        transition: 1s all;
+        transition: .7s all;
     }
 }
 
@@ -298,7 +293,7 @@ nav .useraction {
     .show {
         position: relative;
         margin-right: 0%;
-        transition: 1s all;
+        transition: .7s all;
     }
 }
 
@@ -324,6 +319,6 @@ nav .useraction {
     .show {
         position: relative;
         margin-right: 0%;
-        transition: 1s all;
+        transition: .7s all;
     }
 }
