@@ -47,7 +47,7 @@ nav .useraction {
 
 .container {
     display: flex;
-    overflow-y: auto;
+    overflow: auto;
 }
 :root {
     --bg-sidebar-profile : rgba(236, 233, 233,1);
@@ -56,12 +56,12 @@ nav .useraction {
 
 .profile_container {
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100%;
     flex-basis: 25%;
     text-align: center;
     /* background-color: white; */
     /* background-color: var(--bg-sidebar-profile); */
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .profile_container img {
@@ -96,7 +96,7 @@ nav .useraction {
 .container .portfolio-list {
     height: 100%;
     flex: 4;
-    
+    overflow:auto ;
 }
 
 .wallets {
@@ -279,13 +279,13 @@ nav .useraction {
     }
     .container {
         flex-direction: column;
-        overflow-y: auto;
+        overflow:auto ;
     }
     .profile_container {
         width: 100%;
         min-height: 100%;
         padding: 10px 0;
-        overflow-y: auto;
+        overflow: auto;
     }
     .profile_container img {
         width: 16%;
@@ -332,12 +332,14 @@ nav .useraction {
 @media (min-width: 701px) {
     .profile_container {
         padding-top: 30px;
+        overflow:auto ;
     }
     .profile_container img {
         width: 40%;
     }
     .profile_container {
         flex-basis: 35%;
+        overflow:auto ;
     }
     .port-summary>div {
         display: flex;
@@ -375,6 +377,7 @@ nav .useraction {
     }
     .profile_container {
         flex-basis: 28%;
+        overflow:auto ;
     }
     .port-summary>div {
         display: flex;
