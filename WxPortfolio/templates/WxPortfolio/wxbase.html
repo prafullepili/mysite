@@ -159,9 +159,10 @@
                 $(".profile_container").toggle("slide", ".7");
             });
             $(window).onSwipe(function (result) {
-                if (result.left == true)
-                    $('.right-sidebar').toggleClass('show')
-                    $(".profile_container").toggle("slide", ".7")
+                if (result.left == true){
+                    $('.right-sidebar').toggleClass('show');
+                    $(".profile_container").toggle("slide", ".7");
+                }
             });
         })
     </script>
