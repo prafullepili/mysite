@@ -56,11 +56,11 @@ nav .useraction {
 
 .profile_container {
     margin: 0 auto;
-    height: 100vh;
+    height: 100%;
     flex-basis: 25%;
     text-align: center;
     /* background-color: white; */
-    background-color: var(--bg-sidebar-profile);
+    /* background-color: var(--bg-sidebar-profile); */
     overflow: auto;
 }
 
