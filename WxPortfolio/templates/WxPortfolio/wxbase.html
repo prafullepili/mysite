@@ -164,6 +164,12 @@
                     $(".profile_container").toggle("slide", ".7");
                 }
             });
+            $('.right-sidebar').onSwipe(function (result) {
+                if (result.right == true){
+                    $('.right-sidebar').toggleClass('show');
+                    $(".profile_container").toggle("slide", ".7");
+                }
+            });
         })
     </script>
 </body>
