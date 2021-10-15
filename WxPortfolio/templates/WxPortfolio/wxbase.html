@@ -145,6 +145,7 @@
     </div>
     <script src="{% static 'WxPortfolio/js/jquery-3.6.0.min.js'%}"></script>
     <script src="{% static 'WxPortfolio/js/jquery-ui.js'%}"></script>
+    <script src="{% static 'WxPortfolio/js/swipe.js'%}"></script>
     <script>
         $(document).ready(function () {
             $('.wallets').mouseover(function () {
@@ -157,6 +158,11 @@
                 $('.right-sidebar').toggleClass('show');
                 $(".profile_container").toggle("slide", ".7");
             });
+            $('body').onSwipe(function (result) { 
+                if(result.left == true) 
+                $('.right-sidebar').toggleClass('show');
+                $(".profile_container").toggle("slide", ".7");
+             });
         })
     </script>
 </body>
