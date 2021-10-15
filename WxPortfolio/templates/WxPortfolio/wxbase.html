@@ -158,15 +158,14 @@
                 $('.right-sidebar').toggleClass('show');
                 $(".profile_container").toggle("slide", ".7");
             });
-            $('body').onSwipe(function (result) {
-                if (result.left == true){
+            $(window).onSwipe(function (result) {
+                if (result.left == true)
                     $('.right-sidebar').toggleClass('show')
                     $(".profile_container").toggle("slide", ".7")
-                }
-                 if (results.right == true) {
+
+                 if (results.right == true) 
                     $('.right-sidebar').toggleClass('show')
                     $(".profile_container").toggle("slide", ".7")
-                 }
                 //     alert("Right")
                 // if (results.down == true)
                 //     alert("Down")
