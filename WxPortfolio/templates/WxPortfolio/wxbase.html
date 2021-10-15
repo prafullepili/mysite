@@ -1,6 +1,7 @@
 {%load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,120 +10,154 @@
     <script src="https://kit.fontawesome.com/a8c7f6c38a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{%static 'WxPortfolio/css/style.css' %}">
 </head>
+
 <body>
     <nav>
-       <div class="brand">
-           <p>WxPortfolio</p>
-       </div> 
-       <div class="useraction">
+        <div class="brand">
+            <p>WxPortfolio</p>
+        </div>
+        <div class="useraction">
             {% if user.is_authenticated %}
-                <a href="#" class="user">{{request.user | upper}}</a>
-                <a href="#" class="logout">Logout</a>
+            <a href="#" class="user">{{request.user | upper}}</a>
+            <a href="#" class="logout">Logout</a>
             {% else %}
-                <a href="{%url 'login'%}" class="login">Login</a>
-                <a href="#" class="register">Register</a>
+            <a href="{%url 'login'%}" class="login">Login</a>
+            <a href="#" class="register">Register</a>
             {% endif %}
-       </div>
+        </div>
     </nav>
     <div class="container">
         {% block container %}
-            <div class="profile_container">
-                <img src="{%static 'WxPortfolio/no_img.png'%}" alt="">
-                <p>{{user|upper}}</p>
-                <div class="port-summary">
-                    <div class="curr-value">
-                        <p>Current value</p>
-                        <h2>₹8000</h2>
-                    </div>
-                    <div class="inve-value">
-                        <p>Invested value</p>
-                        <h2>₹10000</h2>
-                    </div>
-                    <div class="gain loss gain-loss">
-                        <p>Gain/Loss</p>
-                        <h2>₹13%</h2>
-                    </div>
+        <div class="profile_container">
+            <img src="{%static 'WxPortfolio/no_img.png'%}" alt="">
+            <p>{{user|upper}}</p>
+            <div class="port-summary">
+                <div class="curr-value">
+                    <p>Current value</p>
+                    <h2>₹8000</h2>
+                </div>
+                <div class="inve-value">
+                    <p>Invested value</p>
+                    <h2>₹10000</h2>
+                </div>
+                <div class="gain loss gain-loss">
+                    <p>Gain/Loss</p>
+                    <h2>₹13%</h2>
                 </div>
             </div>
+        </div>
 
-            <!-- https://cryptologos.cc/logos/shiba-inu-shib-logo.svg?v=014 -->
-                        <!-- 
+        <!-- https://cryptologos.cc/logos/shiba-inu-shib-logo.svg?v=014 -->
+        <!-- 
                             for i in cc_coins.values():
    ...:     if i['symbol'] =='BELA':
    ...:         print('yes')
    ...:     print(f"https://cryptologos.cc/logos/{i['name'].replace(' ','-').lower()}-{i['symbol'].lower()}-logo.svg")
                          -->
-            <div class="portfolio-list">
-                <div class="wallets">
-                    <div class="logo-name">                        
-                        <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.svg" alt="">
-                        <div>
-                            <p>SHIB</p>
-                            <small>SHIBA INU</small>
-                        </div>
-                    </div>
-                    <div class="exist-coin-actions">
-                        <div class="add">
-                            <i class="fa fa-plus"></i>
-                        </div>
-                        <div class="remove">
-                            <i class="fa fa-remove"></i>
-                        </div>
-                    </div>
-                    <div class="coin-values">
-                        <P title="Total {{shib}} coins">3,620,682</P>
-                        <small title="current value">₹8,197.22</small>
+        <div class="portfolio-list">
+            <div class="wallets">
+                <div class="logo-name">
+                    <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.svg" alt="">
+                    <div>
+                        <p>SHIB</p>
+                        <small>SHIBA INU</small>
                     </div>
                 </div>
-                <div class="wallets">
-                    <div class="logo-name">     
-                        <div class="coin-logo">
-                            <img src="https://cryptologos.cc/logos/bittorrent-btt-logo.svg" alt="">
-                        </div>                   
-                        <div>
-                            <p>BTT</p>
-                            <small>BitTorrent</small>
-                        </div>
+                <div class="exist-coin-actions">
+                    <div class="add">
+                        <i class="fa fa-plus"></i>
                     </div>
-                    <div class="exist-coin-actions">
-                        <div class="add">
-                            <i class="fa fa-plus"></i>
-                        </div>
-                        <div class="remove">
-                            <i class="fa fa-remove"></i>
-                        </div>
-                    </div>
-                    <div class="coin-values">
-                        <P title="Total {{BTT}} coins">3554</P>
-                        <small title="current value">₹1,053.05</small>
+                    <div class="remove">
+                        <i class="fa fa-remove"></i>
                     </div>
                 </div>
-                <div class="addNew">
-                    <i class="fa fa-plus"></i>
+                <div class="coin-values">
+                    <P title="Total {{shib}} coins">3,620,682</P>
+                    <small title="current value">₹8,197.22</small>
                 </div>
             </div>
-            <div class="right-sidebar">
-                
+            <div class="wallets">
+                <div class="logo-name">
+                    <div class="coin-logo">
+                        <img src="https://cryptologos.cc/logos/bittorrent-btt-logo.svg" alt="">
+                    </div>
+                    <div>
+                        <p>BTT</p>
+                        <small>BitTorrent</small>
+                    </div>
+                </div>
+                <div class="exist-coin-actions">
+                    <div class="add">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="remove">
+                        <i class="fa fa-remove"></i>
+                    </div>
+                </div>
+                <div class="coin-values">
+                    <P title="Total {{BTT}} coins">3554</P>
+                    <small title="current value">₹1,053.05</small>
+                </div>
             </div>
+            <div class="addNew">
+                <i class="fa fa-plus"></i>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <form action="" class="">
+                <select name="" id="">
+                    <option value="">Select coin</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                    <option value="shib">SHIBA INU</option>
+                </select>
+                <label for=""><small>At Price</small></label>
+                <input type="number" name="" id="" placeholder="AT PRICE">
+                <label for=""><small>Amount</small></label>
+                <input type="number" name="" id="" placeholder="AMOUNT">
+                <div id="available-balance">
+                    <i class="fa fa-wallet"></i>
+                    <small>250</small>
+                </div>
+                <input type="text" pattern="[0-9]" placeholder="TOTAL">
+                <div class="timedate-label">
+                    <label for=""><small>Date</small></label>
+                    <label for=""><small>Time</small></label>
+                </div>
+                <div id="datetime-container">
+                    <input type="date" name="buyselldate">
+                    <input type="time" name="buyselltime">
+                </div>
+            </form>
+        </div>
         {% endblock container %}
     </div>
     <script src="{% static 'WxPortfolio/js/jquery-3.6.0.min.js'%}"></script>
     <script src="{% static 'WxPortfolio/js/jquery-ui.js'%}"></script>
     <script>
-        $(document).ready(function(){
-            $('.wallets').mouseover(function(){
-                $(this.childNodes[3]).css({"visibility":"visible"});
-                $(this.childNodes[3]).parent().css({'background-color':"rgba(211, 211, 211, 0.527)","transition":".2s all"});
+        $(document).ready(function () {
+            $('.wallets').mouseover(function () {
+                $(this.childNodes[3]).css({ "visibility": "visible" });
             });
-            $('.wallets').mouseleave(function(){
-                $('.exist-coin-actions').css("visibility","hidden");
-                $(this.childNodes[3]).parent().css('backgroundColor',"white");
+            $('.wallets').mouseleave(function () {
+                $('.exist-coin-actions').css("visibility", "hidden");
             });
-            $('.addNew').click(function(){
+            $('.addNew').click(function () {
                 $('.right-sidebar').toggleClass('show');
-                $(".profile_container").toggle("slide",".7");
+                $(".profile_container").toggle("slide", ".7");
             })
         })
     </script>
 </body>
+
 </html>
