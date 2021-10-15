@@ -254,7 +254,7 @@ nav .useraction {
 .show {
     position: relative;
     margin-right: 0px;
-    transition: 1s all;
+    transition: position 1s all;
 }
 
 
@@ -323,7 +323,7 @@ nav .useraction {
     .show {
         position: fixed;
         margin-right: 0%;
-        transition: 1s all;
+        transition: positiion 1s all;
     }
 }
 
@@ -365,9 +365,9 @@ nav .useraction {
     .show {
         position: relative;
         margin-right: 0%;
-        transition: 1s all;
+        transition: position 1s all;
     }
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
 /* // Large devices (desktops, 992px and up) */
 

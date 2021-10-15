@@ -105,31 +105,20 @@
         </div>
         <div class="right-sidebar">
             <form action="" class="">
-                <select name="" id="">
+                <select name="" id="" required>
                     <option value="">Select coin</option>
                     <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="shib">SHIBA INU</option>
+                    <option value="btt">Bit Torrent</option>
                 </select>
                 <label for=""><small>At Price</small></label>
-                <input type="number" name="" id="" placeholder="AT PRICE">
+                <input type="number" name="" id="" placeholder="AT PRICE" required>
                 <label for=""><small>Amount</small></label>
-                <input type="number" name="" id="" placeholder="AMOUNT">
+                <input type="number" name="" id="" placeholder="AMOUNT" required>
                 <div id="available-balance">
                     <i class="fa fa-wallet"></i>
                     <small>250</small>
                 </div>
-                <input type="text" pattern="[0-9]" placeholder="TOTAL">
+                <input type="text" pattern="[0-9]" placeholder="TOTAL" >
                 <div class="timedate-label">
                     <label for=""><small>Date</small></label>
                     <label for=""><small>Time</small></label>
@@ -138,7 +127,7 @@
                     <input type="date" name="buyselldate">
                     <input type="time" name="buyselltime">
                 </div>
-                <input type="submit" value="Add">
+                <input type="submit" value="Add" style="background-color: cadetblue;">
             </form>
         </div>
         {% endblock container %}
