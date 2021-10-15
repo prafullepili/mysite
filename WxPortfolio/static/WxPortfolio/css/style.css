@@ -208,6 +208,7 @@ nav .useraction {
     background-color: var(--bg-sidebar-profile);
     margin-right: -50%;
     padding: 10px;
+    overflow: auto;
 }
 
 .right-sidebar form > input,select { 
@@ -228,7 +229,7 @@ nav .useraction {
 }
 .timedate-label {
     display: flex;
-    gap: 10px
+    gap: 10px;
 }
 .timedate-label>label {
     flex: 1;
@@ -238,6 +239,7 @@ nav .useraction {
     display: flex;
     padding: 0px;
     gap: 10px;
+    margin-bottom:15px;
 }
 #datetime-container>* {
     display: block;
