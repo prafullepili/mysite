@@ -61,6 +61,7 @@ nav .useraction {
     text-align: center;
     /* background-color: white; */
     background-color: var(--bg-sidebar-profile);
+    overflow: auto;
 }
 
 .profile_container img {
@@ -95,7 +96,6 @@ nav .useraction {
 .container .portfolio-list {
     height: 100vh;
     flex: 4;
-    overflow: auto;
 }
 
 .wallets {
