@@ -22,7 +22,7 @@ a {
 body {
     font-size: 16px;
     font-family: 'Heebo', sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 nav {
@@ -47,7 +47,7 @@ nav .useraction {
 
 .container {
     display: flex;
-    /* overflow: auto; */
+    overflow: auto;
 }
 :root {
     --bg-sidebar-profile : rgba(236, 233, 233,1);
@@ -61,7 +61,7 @@ nav .useraction {
     text-align: center;
     /* background-color: white; */
     /* background-color: var(--bg-sidebar-profile); */
-    /* overflow: auto; */
+    overflow: auto;
 }
 
 .profile_container img {
@@ -209,7 +209,7 @@ nav .useraction {
     background-color: var(--bg-sidebar-profile);
     margin-right: -50%;
     padding: 10px;
-    /* overflow: auto; */
+    overflow: auto;
     border-radius: 10px;
 }
 
@@ -286,7 +286,7 @@ nav .useraction {
         width: 100%;
         height: calc(100vh - calc(100vh - 100%));
         padding: 10px 0;
-        /* overflow: auto; */
+        overflow: auto;
     }
     .profile_container img {
         width: 16%;
