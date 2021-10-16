@@ -47,7 +47,7 @@ nav .useraction {
 
 .container {
     display: flex;
-    overflow: auto;
+    
 }
 :root {
     --bg-sidebar-profile : rgba(236, 233, 233,1);
@@ -56,12 +56,11 @@ nav .useraction {
 
 .profile_container {
     margin: 0 auto;
-    height: calc(100vh - calc(100vh - 100%));
     flex-basis: 25%;
     text-align: center;
     /* background-color: white; */
     /* background-color: var(--bg-sidebar-profile); */
-    overflow: auto;
+    
 }
 
 .profile_container img {
@@ -94,7 +93,7 @@ nav .useraction {
 /* coins lists */
 
 .container .portfolio-list {
-    height: calc(100vh - calc(100vh - 100%));
+    
     flex: 4;
     overflow:auto ;
 }
@@ -202,14 +201,14 @@ nav .useraction {
 
 /*----------------------- side bar ----------------------------*/
 .right-sidebar {    
-    height: calc(100vh - calc(100vh - 100%));
+    
     position: fixed;
     right: 0px;
     width: 30%;
     background-color: var(--bg-sidebar-profile);
     margin-right: -50%;
     padding: 10px;
-    overflow: auto;
+    
     border-radius: 10px;
 }
 
@@ -284,9 +283,9 @@ nav .useraction {
     }
     .profile_container {
         width: 100%;
-        height: calc(100vh - calc(100vh - 100%));
+        
         padding: 10px 0;
-        overflow: auto;
+        
     }
     .profile_container img {
         width: 16%;
@@ -317,7 +316,7 @@ nav .useraction {
     }
     /* sidebar */
     .right-sidebar { 
-        height: calc(100vh - calc(100vh - 100%));
+        
         width: 100%;
         margin-right: -100%;
     }
