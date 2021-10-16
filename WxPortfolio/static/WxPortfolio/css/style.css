@@ -47,7 +47,7 @@ nav .useraction {
 
 .container {
     display: flex;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 :root {
     --bg-sidebar-profile : rgba(236, 233, 233,1);
