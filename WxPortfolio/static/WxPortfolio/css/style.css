@@ -22,7 +22,7 @@ a {
 body {
     font-size: 16px;
     font-family: 'Heebo', sans-serif;
-    /* overflow: hidden; */
+    overflow: auto;
 }
 
 nav {
@@ -47,7 +47,7 @@ nav .useraction {
 
 .container {
     display: flex;
-    
+    border: 1px solid #000;
 }
 :root {
     --bg-sidebar-profile : rgba(236, 233, 233,1);

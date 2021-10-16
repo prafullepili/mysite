@@ -78,6 +78,27 @@
             </div>
             <div class="wallets">
                 <div class="logo-name">
+                    <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.svg" alt="">
+                    <div>
+                        <p>SHIB</p>
+                        <small>SHIBA INU</small>
+                    </div>
+                </div>
+                <div class="exist-coin-actions">
+                    <div class="add">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="remove">
+                        <i class="fa fa-remove"></i>
+                    </div>
+                </div>
+                <div class="coin-values">
+                    <P title="Total {{shib}} coins">3,620,682</P>
+                    <small title="current value">₹8,197.22</small>
+                </div>
+            </div>
+            <div class="wallets">
+                <div class="logo-name">
                     <div class="coin-logo">
                         <img src="https://cryptologos.cc/logos/bittorrent-btt-logo.svg" alt="">
                     </div>
@@ -103,33 +124,7 @@
                 <i class="fa fa-plus"></i>
             </div>
         </div>
-        <div class="right-sidebar">
-            <form action="" class="">
-                <select name="" id="" required>
-                    <option value="">Select coin</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="btt">Bit Torrent</option>
-                </select>
-                <label for=""><small>At Price</small></label>
-                <input type="number" name="" id="" placeholder="AT PRICE" required>
-                <label for=""><small>Amount</small></label>
-                <input type="number" name="" id="" placeholder="AMOUNT" required>
-                <div id="available-balance">
-                    <i class="fa fa-wallet"></i>
-                    <small>250</small>
-                </div>
-                <input type="text" pattern="[0-9]" placeholder="TOTAL" >
-                <div class="timedate-label">
-                    <label for=""><small>Date</small></label>
-                    <label for=""><small>Time</small></label>
-                </div>
-                <div id="datetime-container">
-                    <input type="date" name="buyselldate">
-                    <input type="time" name="buyselltime">
-                </div>
-                <input type="submit" value="Add" style="background-color: cadetblue;">
-            </form>
-        </div>
+        
         {% endblock container %}
     </div>
     <script src="{% static 'WxPortfolio/js/jquery-3.6.0.min.js'%}"></script>
@@ -137,16 +132,16 @@
     <!-- <script src="{% static 'WxPortfolio/js/swipe.js'%}"></script> -->
     <script>
         $(document).ready(function () {
-            $('.wallets').mouseover(function () {
-                $(this.childNodes[3]).css({ "visibility": "visible" });
-            });
-            $('.wallets').mouseleave(function () {
-                $('.exist-coin-actions').css("visibility", "hidden");
-            });
-            $('.addNew').click(function () {
-                $('.right-sidebar').toggleClass('show');
-                $(".profile_container").toggle("slide", ".7");
-            });
+            // $('.wallets').mouseover(function () {
+            //     $(this.childNodes[3]).css({ "visibility": "visible" });
+            // });
+            // $('.wallets').mouseleave(function () {
+            //     $('.exist-coin-actions').css("visibility", "hidden");
+            // });
+            // $('.addNew').click(function () {
+            //     $('.right-sidebar').toggleClass('show');
+            //     $(".profile_container").toggle("slide", ".7");
+            // });
 
 
             // $(window).onSwipe(function (result) {
