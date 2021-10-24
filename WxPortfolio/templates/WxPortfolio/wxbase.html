@@ -28,35 +28,10 @@
         </div>
     </nav>
     <div class="container">
-        {% block container %}
-        {% comment %} <div class="profile_container">
-            <img src="{%static 'WxPortfolio/no_img.png'%}" alt="">
-            <p>{{user|upper}}</p>
-            <div class="port-summary">
-                <div class="curr-value">
-                    <p>Current value</p>
-                    <h2>₹8000</h2>
-                </div>
-                <div class="inve-value">
-                    <p>Invested value</p>
-                    <h2>₹10000</h2>
-                </div>
-                <div class="gain loss gain-loss">
-                    <p>Gain/Loss</p>
-                    <h2>₹13%</h2>
-                </div>
-            </div>
-        </div> {% endcomment %}
-
-        <!-- https://cryptologos.cc/logos/shiba-inu-shib-logo.svg?v=014 -->
-        <!-- 
-                            for i in cc_coins.values():
-   ...:     if i['symbol'] =='BELA':
-   ...:         print('yes')
-   ...:     print(f"https://cryptologos.cc/logos/{i['name'].replace(' ','-').lower()}-{i['symbol'].lower()}-logo.svg")
-                         -->
+        {% block container %}        
         <div class="portfolio-list">
             {% for coin in allCoins %}
+            <a href="{{coin.code}}">
                 <div class="wallets">
                     <div class="logo-name">
                         <img src="https://media.wazirx.com/media/{{coin.basename}}/84.png" alt="">
@@ -65,56 +40,18 @@
                             <small>{{coin.fullname}}</small>
                         </div>
                     </div>
-                    <div class="exist-coin-actions">
-                        <div class="add">
-                            <i class="fa fa-plus"></i>
-                        </div>
-                        <div class="remove">
-                            <i class="fa fa-remove"></i>
-                        </div>
-                    </div>
                     <div class="coin-values">
                             <P title="Total {{shib}} coins">{{liveData|price:coin.code}}</P>
-                            <small title="current value">₹8,197.22</small>
+                            {% comment %} <small title="current value">₹8,197.22</small> {% endcomment %}
                     </div>
-                </div>                
+                </div> 
+            </a>               
             {% endfor %}
-            {% comment %} <div class="addNew">
-                <i class="fa fa-plus"></i>
-            </div> {% endcomment %}
         </div>
-        {% comment %} <div class="right-sidebar">
-            <form action="" class="">
-                <select name="" id="" required>
-                    <option value="">Select coin</option>
-                    <option value="shib">SHIBA INU</option>
-                    <option value="btt">Bit Torrent</option>
-                </select>
-                <label for=""><small>At Price</small></label>
-                <input type="number" name="" id="" placeholder="AT PRICE" required>
-                <label for=""><small>Amount</small></label>
-                <input type="number" name="" id="" placeholder="AMOUNT" required>
-                <div id="available-balance">
-                    <i class="fa fa-wallet"></i>
-                    <small>250</small>
-                </div>
-                <input type="text" pattern="[0-9]" placeholder="TOTAL" >
-                <div class="timedate-label">
-                    <label for=""><small>Date</small></label>
-                    <label for=""><small>Time</small></label>
-                </div>
-                <div id="datetime-container">
-                    <input type="date" name="buyselldate">
-                    <input type="time" name="buyselltime">
-                </div>                
-                <input type="submit" value="Add" style="background-color: cadetblue;">
-            </form>
-        </div> {% endcomment %}
         {% endblock container %}
     </div>
     <script src="{% static 'WxPortfolio/js/jquery-3.6.0.min.js'%}"></script>
     <script src="{% static 'WxPortfolio/js/jquery-ui.js'%}"></script>
-    <!-- <script src="{% static 'WxPortfolio/js/swipe.js'%}"></script> -->
     <script>
         $(document).ready(function () {
             $('.wallets').mouseover(function () {
@@ -123,25 +60,6 @@
             $('.wallets').mouseleave(function () {
                 $('.exist-coin-actions').css("visibility", "hidden");
             });
-
-            {% comment %} $('.addNew').click(function () {
-                $('.right-sidebar').toggleClass('show');
-                $(".profile_container").toggle("slide", ".7");
-            }); {% endcomment %}
-
-
-            // $(window).onSwipe(function (result) {
-            //     if (result.left == true){
-            //         $('.right-sidebar').toggleClass('show');
-            //         $(".profile_container").toggle("slide", ".7");
-            //     }
-            // });
-            // $('.right-sidebar').onSwipe(function (result) {
-            //     if (result.right == true){
-            //         $('.right-sidebar').toggleClass('show');
-            //         $(".profile_container").toggle("slide", ".7");
-            //     }
-            // });
         })
     </script>
 </body>
