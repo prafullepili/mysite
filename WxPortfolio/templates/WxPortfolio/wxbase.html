@@ -56,7 +56,6 @@
    ...:     print(f"https://cryptologos.cc/logos/{i['name'].replace(' ','-').lower()}-{i['symbol'].lower()}-logo.svg")
                          -->
         <div class="portfolio-list">
-            {% with flag=True  %}
             {% for coin in allCoins %}
                 <div class="wallets">
                     <div class="logo-name">
@@ -80,7 +79,6 @@
                     </div>
                 </div>                
             {% endfor %}
-            {% endwith %}
             <div class="addNew">
                 <i class="fa fa-plus"></i>
             </div>
