@@ -22,7 +22,7 @@ a {
 body {
     font-size: 16px;
     font-family: 'Heebo', sans-serif;
-    overflow: auto;
+    overflow-x : hidden;
 }
 
 nav {
@@ -89,7 +89,7 @@ nav .useraction {
 /* coins lists */
 .container .portfolio-list {
     flex: 4;
-    overflow:auto ;
+    overflow-x : hidden;
 }
 
 .wallets {
@@ -274,7 +274,7 @@ nav .useraction {
     }
     .container {
         flex-direction: column;
-        overflow:auto ;
+        overflow-x : hidden;
     }
     .profile_container {
         width: 100%;
@@ -327,14 +327,14 @@ nav .useraction {
 @media (min-width: 701px) {
     .profile_container {
         padding-top: 30px;
-        overflow:auto ;
+        overflow-x : hidden;
     }
     .profile_container img {
         width: 40%;
     }
     .profile_container {
         flex-basis: 35%;
-        overflow:auto ;
+        overflow-x : hidden;
     }
     .port-summary>div {
         display: flex;
@@ -372,7 +372,7 @@ nav .useraction {
     }
     .profile_container {
         flex-basis: 28%;
-        overflow:auto ;
+        overflow-x : hidden;
     }
     .port-summary>div {
         display: flex;

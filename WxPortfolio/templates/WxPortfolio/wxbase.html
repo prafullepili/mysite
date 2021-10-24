@@ -55,71 +55,29 @@
    ...:     print(f"https://cryptologos.cc/logos/{i['name'].replace(' ','-').lower()}-{i['symbol'].lower()}-logo.svg")
                          -->
         <div class="portfolio-list">
-            <div class="wallets">
-                <div class="logo-name">
-                    <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.svg" alt="">
-                    <div>
-                        <p>SHIB</p>
-                        <small>SHIBA INU</small>
+            {% for coin in allCoins %}
+                <div class="wallets">
+                    <div class="logo-name">
+                        <img src="https://media.wazirx.com/media/{{coin.basename}}/84.png" alt="">
+                        <div>
+                            <p>{{coin.basename}}/{{coin.tc}} </p>
+                            <small>{{coin.fullname}}</small>
+                        </div>
                     </div>
-                </div>
-                <div class="exist-coin-actions">
-                    <div class="add">
-                        <i class="fa fa-plus"></i>
+                    <div class="exist-coin-actions">
+                        <div class="add">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="remove">
+                            <i class="fa fa-remove"></i>
+                        </div>
                     </div>
-                    <div class="remove">
-                        <i class="fa fa-remove"></i>
+                    <div class="coin-values">
+                            <P title="Total {{shib}} coins">{{liveData|slice:":1"}}</P>
+                            <small title="current value">₹8,197.22</small>
                     </div>
-                </div>
-                <div class="coin-values">
-                    <P title="Total {{shib}} coins">3,620,682</P>
-                    <small title="current value">₹8,197.22</small>
-                </div>
-            </div>
-            <div class="wallets">
-                <div class="logo-name">
-                    <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.svg" alt="">
-                    <div>
-                        <p>SHIB</p>
-                        <small>SHIBA INU</small>
-                    </div>
-                </div>
-                <div class="exist-coin-actions">
-                    <div class="add">
-                        <i class="fa fa-plus"></i>
-                    </div>
-                    <div class="remove">
-                        <i class="fa fa-remove"></i>
-                    </div>
-                </div>
-                <div class="coin-values">
-                    <P title="Total {{shib}} coins">3,620,682</P>
-                    <small title="current value">₹8,197.22</small>
-                </div>
-            </div>
-            <div class="wallets">
-                <div class="logo-name">
-                    <div class="coin-logo">
-                        <img src="https://cryptologos.cc/logos/bittorrent-btt-logo.svg" alt="">
-                    </div>
-                    <div>
-                        <p>BTT</p>
-                        <small>BitTorrent</small>
-                    </div>
-                </div>
-                <div class="exist-coin-actions">
-                    <div class="add">
-                        <i class="fa fa-plus"></i>
-                    </div>
-                    <div class="remove">
-                        <i class="fa fa-remove"></i>
-                    </div>
-                </div>
-                <div class="coin-values">
-                    <P title="Total {{BTT}} coins">3554</P>
-                    <small title="current value">₹1,053.05</small>
-                </div>
-            </div>
+                </div>                
+            {% endfor %}
             <div class="addNew">
                 <i class="fa fa-plus"></i>
             </div>
@@ -147,8 +105,8 @@
                 <div id="datetime-container">
                     <input type="date" name="buyselldate">
                     <input type="time" name="buyselltime">
-                </div>
-                <button type="submit" style="background-color: cadetblue;">Add</button>
+                </div>                
+                <input type="submit" value="Add" style="background-color: cadetblue;">
             </form>
         </div>
         {% endblock container %}

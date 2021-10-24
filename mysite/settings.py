@@ -20,15 +20,16 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
-    'home.apps.HomeConfig',
-    'hello.apps.HelloConfig',
-    'autos.apps.AutosConfig',
-    'cats.apps.CatsConfig',
-    'ads.apps.AdsConfig',
+    # 'polls.apps.PollsConfig',
+    # 'home.apps.HomeConfig',
+    # 'hello.apps.HelloConfig',
+    # 'autos.apps.AutosConfig',
+    # 'cats.apps.CatsConfig',
+    # 'ads.apps.AdsConfig',
     'crispy_forms',
-    'barns',
+    # 'barns',
     'WxPortfolio.apps.WxportfolioConfig',
+    'django_extensions',
 
     'django.contrib.admin',
     'django.contrib.auth',
