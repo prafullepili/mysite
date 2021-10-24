@@ -45,6 +45,7 @@ def run():
         ts.save()
     hitagain = True
     for coinCode in dict(assets[['type','name']].values).keys():
+        # agld, bcd,alpaco
         for unit in units(coinCode,hitagain).T.columns:
             hitagain = False
             currency = unit.replace(coinCode,'')

@@ -29,7 +29,7 @@
     </nav>
     <div class="container">
         {% block container %}
-        <div class="profile_container">
+        {% comment %} <div class="profile_container">
             <img src="{%static 'WxPortfolio/no_img.png'%}" alt="">
             <p>{{user|upper}}</p>
             <div class="port-summary">
@@ -46,7 +46,7 @@
                     <h2>₹13%</h2>
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
 
         <!-- https://cryptologos.cc/logos/shiba-inu-shib-logo.svg?v=014 -->
         <!-- 
@@ -79,11 +79,11 @@
                     </div>
                 </div>                
             {% endfor %}
-            <div class="addNew">
+            {% comment %} <div class="addNew">
                 <i class="fa fa-plus"></i>
-            </div>
+            </div> {% endcomment %}
         </div>
-        <div class="right-sidebar">
+        {% comment %} <div class="right-sidebar">
             <form action="" class="">
                 <select name="" id="" required>
                     <option value="">Select coin</option>
@@ -109,7 +109,7 @@
                 </div>                
                 <input type="submit" value="Add" style="background-color: cadetblue;">
             </form>
-        </div>
+        </div> {% endcomment %}
         {% endblock container %}
     </div>
     <script src="{% static 'WxPortfolio/js/jquery-3.6.0.min.js'%}"></script>
@@ -123,10 +123,11 @@
             $('.wallets').mouseleave(function () {
                 $('.exist-coin-actions').css("visibility", "hidden");
             });
-            $('.addNew').click(function () {
+
+            {% comment %} $('.addNew').click(function () {
                 $('.right-sidebar').toggleClass('show');
                 $(".profile_container").toggle("slide", ".7");
-            });
+            }); {% endcomment %}
 
 
             // $(window).onSwipe(function (result) {
